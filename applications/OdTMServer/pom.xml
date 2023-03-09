@@ -11,7 +11,48 @@
      <maven.compiler.source>1.8</maven.compiler.source>
      <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <!--  [MK-13Feb2023] Add exec plugin
+https://www.digitalocean.com/community/tutorials/exec-maven-plugin-run-java-programs-maven-build
+ mvn exec:java
+-->
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <configuration>
+<!--          <mainClass>ab.run.consoleApplication</mainClass>-->
+<!--          <mainClass>ab.run.generateDSTM</mainClass>-->
+          <mainClass>edu.run.Launch4dtm</mainClass>
+
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/jakarta.json/jakarta.json-api -->
+<!--    <dependency>-->
+<!--      <groupId>jakarta.json</groupId>-->
+<!--      <artifactId>jakarta.json-api</artifactId>-->
+<!--      <version>2.1.1</version>-->
+<!--    </dependency>-->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
     <dependency>
       <groupId>net.sourceforge.owlapi</groupId>
       <artifactId>owlapi-distribution</artifactId>
@@ -27,5 +68,22 @@
       <artifactId>jackson-core</artifactId>
       <version>2.12.4</version>
     </dependency>
+      <dependency>
+          <groupId>org.apache.tomcat.embed</groupId>
+          <artifactId>tomcat-embed-core</artifactId>
+          <version>8.5.11</version>
+      </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.github.gv2011</groupId>-->
+<!--      <artifactId>gsoncore-old</artifactId>-->
+<!--      <version>0.9</version>-->
+<!--      <scope>compile</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>com.github.gv2011</groupId>-->
+<!--      <artifactId>gsoncore</artifactId>-->
+<!--      <version>0.10</version>-->
+<!--      <scope>compile</scope>-->
+<!--    </dependency>-->
   </dependencies>
 </project>

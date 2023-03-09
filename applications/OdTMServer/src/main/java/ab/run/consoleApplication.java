@@ -11,7 +11,7 @@ import org.semanticweb.owlapi.formats.*;
 import java.io.*;
 import java.util.logging.*;
 
-class consoleApplication {
+public class consoleApplication {
    private final static Logger LOGGER = Logger.getLogger(LManager.class.getName());
 
    public static void main(String args[]){

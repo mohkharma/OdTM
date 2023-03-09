@@ -62,6 +62,11 @@ Other are items of the 'MODELS' property:
 ```
 mvn -e exec:java -q -Dexec.mainClass="ab.run.consoleApplication" -Dexec.args="server_acctp.properties" 
 ```
+[MK-13Feb2023] If you are using Windows, apply quotes as below:
+
+```
+mvn -e exec:java -q -D"exec.mainClass"="ab.run.consoleApplication" -D"exec.args"="server_acctp.properties" 
+```
 
 where the last item is the properties file.
 
