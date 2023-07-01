@@ -1,4 +1,5 @@
 #!/bin/bash
 
 /home/net/data/bin/apache-jena-3.7.0/bin/arq -q --query $1
+C:\M.kharma_data\PhD\03-Semester-2022\Threat-modeling\jena-4.7.0-source-release\jena-4.7.0\apache-jena\bat\arq  -q --query .\filled_enumerations.rq
 

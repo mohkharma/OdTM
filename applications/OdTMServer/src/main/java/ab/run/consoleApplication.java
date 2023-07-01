@@ -40,6 +40,8 @@ public class consoleApplication {
                ThreatDragonManager parser = new ThreatDragonManager();
                if (parser.init(tdFile,manager)){
                   parser.process(domainModel,classModel,tdFileOut);
+
+
                } else{
                   LOGGER.severe("could not init TD model"+ tdFile);
                }

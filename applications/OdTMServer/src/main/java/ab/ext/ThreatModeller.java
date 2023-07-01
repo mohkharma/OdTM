@@ -303,6 +303,8 @@ public class ThreatModeller extends OManager {
          in = in.replace("\n", "");
          String[] args = in.split(";");
          for (int i=0; i<args.length; i++){
+            System.out.println("--------------------------------args[i]------------------------" + args[i]);
+
             String[] args2 = args[i].split("#");
             if (args2.length ==2){
                String prefix = args2[0];
@@ -311,8 +313,34 @@ public class ThreatModeller extends OManager {
                   String res = classModelIRI+"#"+name;
                   // apply class to instance
                   model.addAxiom(model.getClassAssertionAxiom(IRI.create(res), itemIRI));
+//                  model.flush();
                   // !!! item belongs to the 'HasRestrictions'
                   if(prefix.equals("restriction")) model.addAxiom(model.getClassAssertionAxiom(IRI.create(HasRestrictionsClass), itemIRI));
+
+                  //            //todo mkharma
+//                  // get cves with the 'refToCVEreasoned' property
+//                  String descriptionCVE = "";
+//                  List<OWLNamedIndividual> cves = model.getReasonerObjectPropertyValues(tmp.getIRI(),IRI.create(refToCVEreasonedProperty)).sorted().collect(Collectors.toList());
+//                  if (cves !=null){
+//                     for (Iterator<OWLNamedIndividual> iterator5 = cves.stream().iterator(); iterator5.hasNext(); ){
+//                        OWLNamedIndividual cve =  (OWLNamedIndividual)iterator5.next();
+//                        String cveComment = getModelByIRI1(cve.getIRI()).getSeacherComment(cve);
+//                        if (cveComment != null) descriptionCVE = descriptionCVE+"\n"+cveComment+"; ";
+//                     }
+//                     if (!descriptionCVE.equals("")) description = description + descriptionCVE;
+//                  }
+//            ///------------
+//                  String cveID = vuln.CVEs.get(ii);
+//                  IRI cveIRI = IRI.create(dModel.getDefaultPrefix()+ cveID);
+//                  dModel.addAxiom(dModel.getClassAssertionAxiom(IRI.create(CVEClass),cveIRI));
+//                  dModel.addAxiom(dModel.getObjectPropertyAssertionAxiom(IRI.create(refToCVEProperty),cweIRI,cveIRI));
+//                  // label
+//                  dModel.addAxiom(dModel.getIndividualAnnotation(cveIRI, cveID, "en"));
+
+
+
+
+
                }
                if (prefix.equals("enum")){
                   IRI enumIRI = IRI.create(classModelIRI+"#"+name);
@@ -463,7 +491,7 @@ public class ThreatModeller extends OManager {
             return false;               
          }   
          // get name
-         IRI nameIRI = IRI.create(model.getDefaultPrefix()+O.safeIRI(cellID));
+         IRI nameIRI = IRI.create(model.getDefaultPrefix()+O.safeIRI(cellID)); //like: http://tmp.local#x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e
          
          // get type        
          String cellType = cell.path("type").textValue();

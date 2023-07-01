@@ -51,6 +51,10 @@ public class ThreatDragonManager extends JacksonParser{
                   modeller.applyAxiomsToJSON(diagram);
                   // save the document to a JSON file
                   saveToFile(outputFile);
+
+                  //mkharma save file
+                  LOGGER.severe("Save the working model ");
+                  modeller.saveWorkModelToFile(dataFile+".owl");
                } else {
                   LOGGER.severe("Could not create a work model for the diagram " +diagram.path("title").textValue());
                }
@@ -63,6 +67,8 @@ public class ThreatDragonManager extends JacksonParser{
           LOGGER.severe("failed :(((");
           return false;
       }
+
+
       return true;
    }
  

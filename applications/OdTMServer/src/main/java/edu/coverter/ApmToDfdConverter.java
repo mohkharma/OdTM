@@ -246,6 +246,21 @@ public class ApmToDfdConverter {
 
     private static void generateNodes(NodeDataArray[] nodeDataArray, List<Cell> cells, int z) {
         Cell cell;
+/*
+Read JSON file from APM tool
+Parse JSON input and save in nodeDataArray
+
+Loop element in nodeDataArray
+    If element type equals "USER" Then
+        Create DFD element of type External entity
+    Else If element type equals "Application"  Then
+        Create DFD element of type Process
+    Else If element type equals "database"  Then
+        Create DFD element of type Data Store
+    End If
+
+End Loop
+ */
 
         for (NodeDataArray nodeDataObject :
                 nodeDataArray) {
@@ -266,7 +281,7 @@ public class ApmToDfdConverter {
                 size.setWidth(160);
                 cell.setSize(size);
                 position.setY(250);
-                cell.setDescription("class#RemoteUser");
+                cell.setDescription("class#RemoteUser;");
 //                cell.set(false);//provide authintation
                 //todo add trust boundary
                 /*   "serviceType": "SPRING_BOOT",
@@ -278,8 +293,9 @@ public class ApmToDfdConverter {
                 size.setHeight(100);
                 size.setWidth(100);
                 cell.setSize(size);
-                cell.setDescription("class#CloudApplication"); //todo handle class#ExternalService
-
+                cell.setDescription("class#CloudApplication;"); //todo handle class#ExternalService
+//                cell.setDescription("class#CloudApplication;\nrestriction#HasRestriction_Platform_Linux"); //todo handle class#ExternalService
+//                cell.setDescription("class#CloudApplication;TECH#NGNIX;TECHVER#1.23.0;IPREF#10.122.22.10;restriction#HasRestriction_Platform_Linux"); //todo handle class#ExternalService
             }
             cell.setPosition(position);
 
