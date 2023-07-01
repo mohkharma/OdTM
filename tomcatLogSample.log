@@ -1,0 +1,2 @@
+[2023-06-30 10:30:00] [INFO] [Catalina] This is an informational log message.
+[2023-06-30 10:30:01] [ERROR] [Catalina_Base] Server Java heap memory exceeded.
