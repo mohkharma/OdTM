@@ -1,0 +1,202 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cc="http://birzeit.edu/CC#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:cloud="http://example.com/cloud#"
+    xmlns:logont="http://birzeit.edu/logging_schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://birzeit.edu/CC">
+    <owl:imports rdf:resource="file:///C:/M.kharma_data/PhD/03-Semester-2022/Threat-modeling/OdTM-mkharma/CloudServiceModelV2.owl"/>
+    <owl:imports rdf:resource="file:///C:/M.kharma_data/PhD/03-Semester-2022/Threat-modeling/OdTM-mkharma/loggingSchema.owl"/>
+    <owl:imports rdf:resource="file:///C:/M.kharma_data/PhD/03-Semester-2022/Threat-modeling/OdTM-mkharma/CVE_OntologyV2.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://birzeit.edu/logging_schema#Logger"/>
+  <owl:Class rdf:about="http://birzeit.edu/CC#Communication_as_a_service">
+    <rdfs:subClassOf rdf:resource="http://example.com/cloud#ServiceModel"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://birzeit.edu/logging_schema#LogLevel"/>
+  <owl:Class rdf:about="http://birzeit.edu/CC#Function_as_a_Service">
+    <rdfs:subClassOf rdf:resource="http://example.com/cloud#PaaS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://birzeit.edu/CC#Desktop_as_a_service">
+    <rdfs:subClassOf rdf:resource="http://example.com/cloud#SaaS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://birzeit.edu/logging_schema#LogEntry"/>
+  <owl:Class rdf:about="http://birzeit.edu/CC#CloudProvider">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://dbpedia.org/ontology/company"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://birzeit.edu/CC#OfferServices">
+    <rdfs:range rdf:resource="http://example.com/cloud#ServiceModel"/>
+    <rdfs:domain rdf:resource="http://birzeit.edu/CC#CloudProvider"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://example.com/cloud#provides">
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Servers">
+        <rdfs:label>Servers</rdfs:label>
+        <rdfs:comment>The servers component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Application">
+        <rdfs:comment>The application component provided in the Software as a Service (SaaS) model</rdfs:comment>
+        <rdfs:label>Application</rdfs:label>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Networking">
+        <rdfs:label>Networking</rdfs:label>
+        <rdfs:comment>The networking component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Data">
+        <rdfs:label>Data</rdfs:label>
+        <rdfs:comment>The data component provided in the Software as a Service (SaaS) model</rdfs:comment>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Virtualization">
+        <rdfs:comment>The virtualization component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
+        <rdfs:label>Virtualization</rdfs:label>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://example.com/cloud#ServiceModel"/>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Middleware">
+        <rdfs:label>Middleware</rdfs:label>
+        <rdfs:comment>The middleware component provided in the Platform as a Service (PaaS) model</rdfs:comment>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#OperatingSystem">
+        <rdfs:comment>The operating system component provided in the Platform as a Service (PaaS) model</rdfs:comment>
+        <rdfs:label>Operating System</rdfs:label>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:label>provides</rdfs:label>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Storage">
+        <rdfs:comment>The storage component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
+        <rdfs:label>Storage</rdfs:label>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://example.com/cloud#Runtime">
+        <rdfs:label>Runtime</rdfs:label>
+        <rdfs:comment>The runtime component provided in the Platform as a Service (PaaS) model</rdfs:comment>
+      </rdf:Description>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://birzeit.edu/logging_schema#hasLevel"/>
+  <owl:ObjectProperty rdf:about="http://birzeit.edu/logging_schema#hasLogger"/>
+  <owl:DatatypeProperty rdf:about="http://birzeit.edu/logging_schema#hasTimestamp"/>
+  <owl:DatatypeProperty rdf:about="http://birzeit.edu/logging_schema#hasMessage"/>
+  <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Google"/>
+  <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Amazon"/>
+  <logont:LogEntry rdf:about="http://birzeit.edu/logging_schema#cad5b0e2-19fc-471b-a0a4-a750d76e7698">
+    <logont:hasMessage>[ERROR] [Catalina_Base] Server Java heap memory exceeded.</logont:hasMessage>
+    <logont:hasLogger>
+      <logont:Logger rdf:about="http://birzeit.edu/logging_schema#Catalina_Base"/>
+    </logont:hasLogger>
+    <logont:hasLevel>
+      <logont:LogLevel rdf:about="http://birzeit.edu/logging_schema#ERROR"/>
+    </logont:hasLevel>
+    <logont:hasTimestamp>[2023-06-30 10:30:01]</logont:hasTimestamp>
+  </logont:LogEntry>
+  <logont:LogEntry rdf:about="http://birzeit.edu/logging_schema#04e16473-f8bf-4443-a313-8d0ecf9f9b86">
+    <logont:hasMessage>[SEC_ALERT] [Catalina] unauthorized access attempt from 84.66.24.145.</logont:hasMessage>
+    <logont:hasLogger>
+      <logont:Logger rdf:about="http://birzeit.edu/logging_schema#Catalina"/>
+    </logont:hasLogger>
+    <logont:hasLevel>
+      <logont:LogLevel rdf:about="http://birzeit.edu/logging_schema#SEC_ALERT"/>
+    </logont:hasLevel>
+    <logont:hasTimestamp>[2023-06-30 10:30:04]</logont:hasTimestamp>
+  </logont:LogEntry>
+  <cc:Function_as_a_Service rdf:about="http://birzeit.edu/CC#Function_as_a_Service_Lamda">
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>
+    </cloud:provides>
+    <rdfs:comment>DaaS provider offering data and application,Middleware,OperatingSystem,Runtime,networking, storage, servers, and virtualization</rdfs:comment>
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#Middleware_Azure_Kafka"/>
+    </cloud:provides>
+    <rdfs:label>Microsoft Azure Desktop</rdfs:label>
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#Networking_Azure_VLAN"/>
+    </cloud:provides>
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#OperatingSystem_Azure_Linux"/>
+    </cloud:provides>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#Runtime_Azure_Java"/>
+    </cloud:provides>
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#Storage_Azure_S3"/>
+    </cloud:provides>
+    <cloud:provides>
+      <owl:NamedIndividual rdf:about="http://example.com/cloud#Servers_Azure_EC2"/>
+    </cloud:provides>
+  </cc:Function_as_a_Service>
+  <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Oracle"/>
+  <logont:LogEntry rdf:about="http://birzeit.edu/logging_schema#a93b549a-8b7c-4e22-9e43-9b2547f1a47b">
+    <logont:hasMessage>[INFO] [Catalina] MOhammed Kharama is a testing, This is an informational log message.</logont:hasMessage>
+    <logont:hasLogger rdf:resource="http://birzeit.edu/logging_schema#Catalina"/>
+    <logont:hasLevel>
+      <logont:LogLevel rdf:about="http://birzeit.edu/logging_schema#INFO"/>
+    </logont:hasLevel>
+    <logont:hasTimestamp>[2023-06-30 10:30:00]</logont:hasTimestamp>
+  </logont:LogEntry>
+  <cc:Communication_as_a_service rdf:about="http://birzeit.edu/CC#Communication_as_a_service_Azure_VPN">
+    <rdfs:label>Microsoft Azure VPN</rdfs:label>
+    <rdfs:comment>DaaS provider offering networking</rdfs:comment>
+    <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </cc:Communication_as_a_service>
+  <logont:LogEntry rdf:about="http://birzeit.edu/logging_schema#92b187e6-dfa7-4b75-9164-2b2c10b26f89">
+    <logont:hasMessage>[DEBUG] [Catalina] memory swap is critical.</logont:hasMessage>
+    <logont:hasLogger rdf:resource="http://birzeit.edu/logging_schema#Catalina"/>
+    <logont:hasLevel>
+      <logont:LogLevel rdf:about="http://birzeit.edu/logging_schema#DEBUG"/>
+    </logont:hasLevel>
+    <logont:hasTimestamp>[2023-06-30 10:30:02]</logont:hasTimestamp>
+  </logont:LogEntry>
+  <logont:LogEntry rdf:about="http://birzeit.edu/logging_schema#2cfcd3f1-a71a-4bb6-8129-7fdd19debaf8">
+    <logont:hasMessage>[WARNING] [Catalina_Base] Dropping rate is increased, increase number of instances.</logont:hasMessage>
+    <logont:hasLogger rdf:resource="http://birzeit.edu/logging_schema#Catalina_Base"/>
+    <logont:hasLevel>
+      <logont:LogLevel rdf:about="http://birzeit.edu/logging_schema#WARNING"/>
+    </logont:hasLevel>
+    <logont:hasTimestamp>[2023-06-30 10:30:03]</logont:hasTimestamp>
+  </logont:LogEntry>
+  <cc:CloudProvider rdf:about="http://birzeit.edu/CC#CloudProvider_Microsoft">
+    <cc:OfferServices rdf:resource="http://example.com/cloud#Azure_VirtualMachines"/>
+    <cc:OfferServices rdf:resource="http://example.com/cloud#Azure_AppService"/>
+    <cc:OfferServices rdf:resource="http://example.com/cloud#AWS_EC2"/>
+    <cc:OfferServices>
+      <cc:Desktop_as_a_service rdf:about="http://birzeit.edu/CC#Azure_Desktop">
+        <cloud:provides rdf:resource="http://example.com/cloud#Middleware_Azure_Kafka"/>
+        <cloud:provides rdf:resource="http://example.com/cloud#Runtime_Azure_Java"/>
+        <rdfs:label>Microsoft Azure Desktop</rdfs:label>
+        <cloud:provides>
+          <owl:NamedIndividual rdf:about="http://example.com/cloud#Application_Azure_RDP"/>
+        </cloud:provides>
+        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>
+        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem_Azure_Linux"/>
+        <rdfs:comment>DaaS provider offering data and application,Middleware,OperatingSystem,Runtime,networking, storage, servers, and virtualization</rdfs:comment>
+        <cloud:provides>
+          <owl:NamedIndividual rdf:about="http://example.com/cloud#Data_Azure_RDMS"/>
+        </cloud:provides>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <cloud:provides rdf:resource="http://example.com/cloud#Storage_Azure_S3"/>
+        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>
+        <cloud:provides rdf:resource="http://example.com/cloud#Servers_Azure_EC2"/>
+      </cc:Desktop_as_a_service>
+    </cc:OfferServices>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </cc:CloudProvider>
+</rdf:RDF>

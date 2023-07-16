@@ -1,0 +1,153 @@
+Prefix(:=<http://tmp.local#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://tmp.local>
+Import(<http://www.grsu.by/net/OdTMACCTP>)
+
+Declaration(DataProperty(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText>))
+Declaration(NamedIndividual(:c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0))
+Declaration(NamedIndividual(:cdefdae0dash9037dash47fedash9daadashac6fe9ce46af))
+Declaration(NamedIndividual(:deef91addash4c4adash4201dash93c5dashd158d880e478))
+Declaration(NamedIndividual(:ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597))
+Declaration(NamedIndividual(:f38e2271dasha781dash46c3dash8d05dash6fef8c037924))
+Declaration(NamedIndividual(:f5aa5e24dash85eadash47b3dasha969dash20850a0c0569))
+Declaration(NamedIndividual(:f8429189dashfbb4dash4285dash95fbdash00205615ab3f))
+Declaration(NamedIndividual(:x0f135f34dash3676dash43f6dash89e5dash910575f4d89f))
+Declaration(NamedIndividual(:x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428))
+Declaration(NamedIndividual(:x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09))
+Declaration(NamedIndividual(:x48feed23dash97aadash4ee7dash8ab7dash64273772f892))
+Declaration(NamedIndividual(:x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e))
+Declaration(NamedIndividual(:x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7))
+Declaration(NamedIndividual(:x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a))
+Declaration(NamedIndividual(:x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://tmp.local#c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0> (<http://tmp.local#c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0 :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0 :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0 "c260e480-cacb-4d37-baa9-0e2dce5d8ea0"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :c260e480dashcacbdash4d37dashbaa9dash0e2dce5d8ea0 "HTTP request"@en)
+
+# Individual: <http://tmp.local#cdefdae0dash9037dash47fedash9daadashac6fe9ce46af> (<http://tmp.local#cdefdae0dash9037dash47fedash9daadashac6fe9ce46af>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :cdefdae0dash9037dash47fedash9daadashac6fe9ce46af)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :cdefdae0dash9037dash47fedash9daadashac6fe9ce46af :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :cdefdae0dash9037dash47fedash9daadashac6fe9ce46af :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :cdefdae0dash9037dash47fedash9daadashac6fe9ce46af "cdefdae0-9037-47fe-9daa-ac6fe9ce46af"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :cdefdae0dash9037dash47fedash9daadashac6fe9ce46af "Response"@en)
+
+# Individual: <http://tmp.local#deef91addash4c4adash4201dash93c5dashd158d880e478> (<http://tmp.local#deef91addash4c4adash4201dash93c5dashd158d880e478>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :deef91addash4c4adash4201dash93c5dashd158d880e478)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :deef91addash4c4adash4201dash93c5dashd158d880e478 :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :deef91addash4c4adash4201dash93c5dashd158d880e478 :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :deef91addash4c4adash4201dash93c5dashd158d880e478 "deef91ad-4c4a-4201-93c5-d158d880e478"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :deef91addash4c4adash4201dash93c5dashd158d880e478 "HTTP response"@en)
+
+# Individual: <http://tmp.local#ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597> (<http://tmp.local#ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597>)
+
+ClassAssertion(<http://www.grsu.by/net/ACCTP/common#CloudApplication> :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597)
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#Process> :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597 "ef0d4fc6-aa3f-40be-8acc-1513d8a52597"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597 "Application
+server2"@en)
+
+# Individual: <http://tmp.local#f38e2271dasha781dash46c3dash8d05dash6fef8c037924> (<http://tmp.local#f38e2271dasha781dash46c3dash8d05dash6fef8c037924>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :f38e2271dasha781dash46c3dash8d05dash6fef8c037924)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :f38e2271dasha781dash46c3dash8d05dash6fef8c037924 :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :f38e2271dasha781dash46c3dash8d05dash6fef8c037924 :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :f38e2271dasha781dash46c3dash8d05dash6fef8c037924 "f38e2271-a781-46c3-8d05-6fef8c037924"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :f38e2271dasha781dash46c3dash8d05dash6fef8c037924 "Response"@en)
+
+# Individual: <http://tmp.local#f5aa5e24dash85eadash47b3dasha969dash20850a0c0569> (<http://tmp.local#f5aa5e24dash85eadash47b3dasha969dash20850a0c0569>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :f5aa5e24dash85eadash47b3dasha969dash20850a0c0569)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :f5aa5e24dash85eadash47b3dasha969dash20850a0c0569 :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :f5aa5e24dash85eadash47b3dasha969dash20850a0c0569 :x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :f5aa5e24dash85eadash47b3dasha969dash20850a0c0569 "f5aa5e24-85ea-47b3-a969-20850a0c0569"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :f5aa5e24dash85eadash47b3dasha969dash20850a0c0569 "HTTP response"@en)
+
+# Individual: <http://tmp.local#f8429189dashfbb4dash4285dash95fbdash00205615ab3f> (<http://tmp.local#f8429189dashfbb4dash4285dash95fbdash00205615ab3f>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :f8429189dashfbb4dash4285dash95fbdash00205615ab3f)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :f8429189dashfbb4dash4285dash95fbdash00205615ab3f :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :f8429189dashfbb4dash4285dash95fbdash00205615ab3f :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :f8429189dashfbb4dash4285dash95fbdash00205615ab3f "f8429189-fbb4-4285-95fb-00205615ab3f"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :f8429189dashfbb4dash4285dash95fbdash00205615ab3f "Request"@en)
+
+# Individual: <http://tmp.local#x0f135f34dash3676dash43f6dash89e5dash910575f4d89f> (<http://tmp.local#x0f135f34dash3676dash43f6dash89e5dash910575f4d89f>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataStore> :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f "0f135f34-3676-43f6-89e5-910575f4d89f"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f "Database"@en)
+
+# Individual: <http://tmp.local#x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428> (<http://tmp.local#x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428>)
+
+ClassAssertion(<http://www.grsu.by/net/ACCTP/common#CloudApplication> :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428)
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#Process> :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428 "1dc65306-4756-44ab-a63c-0d82bf9b3428"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428 "Application
+server1"@en)
+
+# Individual: <http://tmp.local#x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09> (<http://tmp.local#x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09>)
+
+ClassAssertion(<http://www.grsu.by/net/ACCTP/common#CloudApplication> :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#Process> :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09 "3f2515ca-58b4-49a8-88b5-fc20415d3d09"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09 "Load balancer"@en)
+
+# Individual: <http://tmp.local#x48feed23dash97aadash4ee7dash8ab7dash64273772f892> (<http://tmp.local#x48feed23dash97aadash4ee7dash8ab7dash64273772f892>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :x48feed23dash97aadash4ee7dash8ab7dash64273772f892)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :x48feed23dash97aadash4ee7dash8ab7dash64273772f892 :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :x48feed23dash97aadash4ee7dash8ab7dash64273772f892 :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x48feed23dash97aadash4ee7dash8ab7dash64273772f892 "48feed23-97aa-4ee7-8ab7-64273772f892"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x48feed23dash97aadash4ee7dash8ab7dash64273772f892 "HTTP response"@en)
+
+# Individual: <http://tmp.local#x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e> (<http://tmp.local#x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e>)
+
+ClassAssertion(<http://www.grsu.by/net/ACCTP/common#RemoteUser> :x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e)
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#ExternalInteractor> :x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e "5cf5e6ce-aa73-4316-ae70-6d6268a91b0e"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e "End user"@en)
+
+# Individual: <http://tmp.local#x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7> (<http://tmp.local#x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7 :x5cf5e6cedashaa73dash4316dashae70dash6d6268a91b0e)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7 :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7 "5f4bbc9c-09e5-45a1-b535-ffd3c43775d7"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x5f4bbc9cdash09e5dash45a1dashb535dashffd3c43775d7 "HTTP request"@en)
+
+# Individual: <http://tmp.local#x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a> (<http://tmp.local#x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a :x3f2515cadash58b4dash49a8dash88b5dashfc20415d3d09)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a :ef0d4fc6dashaa3fdash40bedash8accdash1513d8a52597)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a "7b82e5aa-771d-477b-b480-6d9de6b58d4a"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x7b82e5aadash771ddash477bdashb480dash6d9de6b58d4a "HTTP request"@en)
+
+# Individual: <http://tmp.local#x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4> (<http://tmp.local#x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4>)
+
+ClassAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#DataFlow> :x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasSource> :x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4 :x1dc65306dash4756dash44abdasha63cdash0d82bf9b3428)
+ObjectPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasTarget> :x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4 :x0f135f34dash3676dash43f6dash89e5dash910575f4d89f)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasID> :x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4 "84adbe3c-7593-4b89-9b0e-4bff5fa2c8c4"@en)
+DataPropertyAssertion(<http://www.grsu.by/net/OdTMBaseThreatModel#hasText> :x84adbe3cdash7593dash4b89dash9b0edash4bff5fa2c8c4 "Request"@en)
+
+
+)

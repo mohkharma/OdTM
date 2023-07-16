@@ -1,0 +1,593 @@
+{
+  "summary": {
+    "title": "client-server architecture",
+    "owner": "Mohammed Kharma"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "client-server",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "diagramType": "STRIDE",
+        "id": 0,
+        "$$hashKey": "object:14",
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 31,
+                "y": 31
+              },
+              "angle": 0,
+              "id": "5cf5e6ce-aa73-4316-ae70-6d6268a91b0e",
+              "z": 1,
+              "hasOpenThreats": false,
+              "description": "class#RemoteUser;",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "End user"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 377,
+                "y": 27
+              },
+              "angle": 0,
+              "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09",
+              "z": 2,
+              "hasOpenThreats": false,
+              "description": "class#CloudApplication;",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Load balancer"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "5cf5e6ce-aa73-4316-ae70-6d6268a91b0e"
+              },
+              "target": {
+                "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09"
+              },
+              "vertices": [
+                {
+                  "x": 327,
+                  "y": 24
+                }
+              ],
+              "id": "5f4bbc9c-09e5-45a1-b535-ffd3c43775d7",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6796843156946647,
+                    "offset": -16.026693843419153
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09"
+              },
+              "target": {
+                "id": "5cf5e6ce-aa73-4316-ae70-6d6268a91b0e"
+              },
+              "vertices": [],
+              "id": "f5aa5e24-85ea-47b3-a969-20850a0c0569",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.44687888190107633,
+                    "offset": 16.62020919177734
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 164,
+                "y": 232
+              },
+              "angle": 0,
+              "id": "1dc65306-4756-44ab-a63c-0d82bf9b3428",
+              "z": 5,
+              "hasOpenThreats": false,
+              "description": "class#CloudApplication;",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Application\nserver1"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 380,
+                "y": 253
+              },
+              "angle": 0,
+              "id": "ef0d4fc6-aa3f-40be-8acc-1513d8a52597",
+              "z": 5,
+              "hasOpenThreats": false,
+              "description": "class#CloudApplication;",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Application\nserver2"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "1dc65306-4756-44ab-a63c-0d82bf9b3428"
+              },
+              "target": {
+                "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09"
+              },
+              "vertices": [
+                {
+                  "x": 285,
+                  "y": 176
+                }
+              ],
+              "id": "deef91ad-4c4a-4201-93c5-d158d880e478",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.3208154561964222,
+                    "offset": -23.159651527759173
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09"
+              },
+              "target": {
+                "id": "1dc65306-4756-44ab-a63c-0d82bf9b3428"
+              },
+              "vertices": [
+                {
+                  "x": 298,
+                  "y": 231
+                }
+              ],
+              "id": "c260e480-cacb-4d37-baa9-0e2dce5d8ea0",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.49970308588374435,
+                    "offset": 5.99281451783262
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 8,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09"
+              },
+              "target": {
+                "id": "ef0d4fc6-aa3f-40be-8acc-1513d8a52597"
+              },
+              "vertices": [
+                {
+                  "x": 411,
+                  "y": 215
+                }
+              ],
+              "id": "7b82e5aa-771d-477b-b480-6d9de6b58d4a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 9,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "ef0d4fc6-aa3f-40be-8acc-1513d8a52597"
+              },
+              "target": {
+                "id": "3f2515ca-58b4-49a8-88b5-fc20415d3d09"
+              },
+              "vertices": [
+                {
+                  "x": 476,
+                  "y": 213
+                }
+              ],
+              "id": "48feed23-97aa-4ee7-8ab7-64273772f892",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6707609701729094,
+                    "offset": 5.879903121384671
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 10,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 180,
+                "y": 464
+              },
+              "angle": 0,
+              "id": "0f135f34-3676-43f6-89e5-910575f4d89f",
+              "z": 11,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Database"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "1dc65306-4756-44ab-a63c-0d82bf9b3428"
+              },
+              "target": {
+                "id": "0f135f34-3676-43f6-89e5-910575f4d89f"
+              },
+              "vertices": [],
+              "id": "84adbe3c-7593-4b89-9b0e-4bff5fa2c8c4",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.6731392811240151,
+                    "offset": -50.48397995921047
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 12,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "ef0d4fc6-aa3f-40be-8acc-1513d8a52597"
+              },
+              "target": {
+                "id": "0f135f34-3676-43f6-89e5-910575f4d89f"
+              },
+              "vertices": [],
+              "id": "f8429189-fbb4-4285-95fb-00205615ab3f",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "0f135f34-3676-43f6-89e5-910575f4d89f"
+              },
+              "target": {
+                "id": "ef0d4fc6-aa3f-40be-8acc-1513d8a52597"
+              },
+              "vertices": [
+                {
+                  "x": 430,
+                  "y": 411
+                }
+              ],
+              "id": "f38e2271-a781-46c3-8d05-6fef8c037924",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "0f135f34-3676-43f6-89e5-910575f4d89f"
+              },
+              "target": {
+                "id": "1dc65306-4756-44ab-a63c-0d82bf9b3428"
+              },
+              "vertices": [
+                {
+                  "x": 134,
+                  "y": 415
+                }
+              ],
+              "id": "cdefdae0-9037-47fe-9daa-ac6fe9ce46af",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 812
+        }
+      }
+    ]
+  }
+}
