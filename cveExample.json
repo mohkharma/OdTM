@@ -1,25 +1,25 @@
 {
     "dataType": "CVE_RECORD",
     "dataVersion": "5.0",
-    "cveMetadata": {
-        "cveId": "CVE-2023-0001",
-        "assignerOrgId": "d6c1279f-00f6-4ef7-9217-f89ffe703ec0",
-        "state": "PUBLISHED",
-        "assignerShortName": "palo_alto",
-        "dateReserved": "2022-10-27T18:47:48.958Z",
-        "datePublished": "2023-02-08T17:20:20.774Z"
+    "cveMetadata": {   /*hasCveHeader CVEHeader*/
+        "cveId": "CVE-2023-0001",  /*// cveId*/
+        "assignerOrgId": "d6c1279f-00f6-4ef7-9217-f89ffe703ec0",  // hasOrgId
+        "state": "PUBLISHED",               //status
+        "assignerShortName": "palo_alto",       //assignerShortName
+        "dateReserved": "2022-10-27T18:47:48.958Z",     //dateReserved
+        "datePublished": "2023-02-08T17:20:20.774Z"   //datePublished
     },
     "containers": {
-        "cna": {
-            "affected": [
+        "cna": {  //hasDetailsFrom   CVEInformationSource
+            "affected": [           //hasAffected   AffectedProduct
                 {
                     "defaultStatus": "unaffected",
-                    "platforms": [
+                    "platforms": [  //hasPlatform  Platform
                         "Windows"
                     ],
-                    "product": "Cortex XDR agent",
-                    "vendor": "Palo Alto Networks",
-                    "versions": [
+                    "product": "Cortex XDR agent",  //hasProduct
+                    "vendor": "Palo Alto Networks",  //hasVendor
+                    "versions": [  //hasVersion
                         {
                             "status": "unaffected",
                             "version": "7.9 All"
@@ -35,10 +35,10 @@
                                     "status": "unaffected"
                                 }
                             ],
-                            "lessThan": "7.5.101-CE",
-                            "status": "affected",
-                            "version": "7.5",
-                            "versionType": "custom"
+                            "lessThan": "7.5.101-CE",  //lessThan
+                            "status": "affected",   //hasStatus
+                            "version": "7.5",   //hasVersion
+                            "versionType": "custom"  //hasVersionType
                         },
                         {
                             "status": "unaffected",
@@ -47,16 +47,18 @@
                     ]
                 }
             ],
-            "credits": [
+            "credits": [ //hasContributer Domain CVE  // hasContributer CREDIT/Contributer,
                 {
-                    "lang": "en",
-                    "type": "finder",
-                    "user": "00000000-0000-4000-9000-000000000000",
+                    "lang": "en",  //lang Domain Contributer
+                    "type": "finder",  //contributionType
+                    "user": "00000000-0000-4000-9000-000000000000",  //user Domain Contributer
+
+                    //contributionDesc
                     "value": "Palo Alto Networks thanks Robert McCallum (M42D) for discovering and reporting this issue."
                 }
             ],
-            "datePublic": "2023-02-08T17:00:00.000Z",
-            "descriptions": [
+            "datePublic": "2023-02-08T17:00:00.000Z", //CVEInformationSource  datePublished
+            "descriptions": [ //CVEInformationSource, hasDescription,
                 {
                     "lang": "en",
                     "supportingMedia": [
@@ -69,7 +71,8 @@
                     "value": "An information exposure vulnerability in the Palo Alto Networks Cortex XDR agent on Windows devices allows a local system administrator to disclose the admin password for the agent in cleartext, which bad actors can then use to execute privileged cytool commands that disable or uninstall the agent."
                 }
             ],
-            "metrics": [
+
+            "metrics": [ //hasMetric Metric,
                 {
                     "cvssV3_1": {
                         "attackComplexity": "LOW",
@@ -96,9 +99,10 @@
             ],
             "problemTypes": [
                 {
-                    "descriptions": [
+                    "descriptions": [  //hasCWE  CWE,
                         {
-                            "cweId": "CWE-319",
+                            "cweId": "CWE-319",  //cweId
+                            //description
                             "description": "CWE-319 Cleartext Transmission of Sensitive Information",
                             "lang": "en",
                             "type": "CWE"
@@ -111,12 +115,12 @@
                 "shortName": "palo_alto",
                 "dateUpdated": "2023-02-08T17:20:20.774Z"
             },
-            "references": [
+            "references": [  //hasReference  Reference
                 {
-                    "url": "https://security.paloaltonetworks.com/CVE-2023-0001"
+                    "url": "https://security.paloaltonetworks.com/CVE-2023-0001"   //hasURL
                 }
             ],
-            "solutions": [
+            "solutions": [ //hasSolution  Solution,
                 {
                     "lang": "en",
                     "supportingMedia": [
@@ -126,24 +130,28 @@
                             "value": "This issue is fixed in Cortex XDR agent 7.5.101-CE and all later supported Cortex XDR agent versions. (Cortex XDR agent 5.0 is not impacted.)<br><br>After you upgrade to a fixed version of the Cortex XDR agent, you must change the agent admin password in case it was already disclosed to users."
                         }
                     ],
+
+                    //hasDescription
                     "value": "This issue is fixed in Cortex XDR agent 7.5.101-CE and all later supported Cortex XDR agent versions. (Cortex XDR agent 5.0 is not impacted.)\n\nAfter you upgrade to a fixed version of the Cortex XDR agent, you must change the agent admin password in case it was already disclosed to users."
                 }
             ],
+            //ignore
             "source": {
                 "defect": [
                     "CPATR-13152"
                 ],
                 "discovery": "INTERNAL"
             },
-            "timeline": [
+
+            "timeline": [ //hasReportingHistory ReportingHistory,
                 {
                     "lang": "en",
-                    "time": "2023-02-08T17:00:00.000Z",
-                    "value": "Initial publication"
+                    "time": "2023-02-08T17:00:00.000Z",  //hasTime
+                    "value": "Initial publication"   //hasStatus
                 }
             ],
             "title": "Cortex XDR Agent: Cleartext Exposure of Agent Admin Password",
-            "workarounds": [
+            "workarounds": [  // hasWorkaround  Workaround
                 {
                     "lang": "en",
                     "supportingMedia": [
@@ -153,12 +161,9 @@
                             "value": "There are no known workarounds for this issue."
                         }
                     ],
-                    "value": "There are no known workarounds for this issue."
+                    "value": "There are no known workarounds for this issue."  //hasDescription
                 }
             ],
-            "x_generator": {
-                "engine": "Vulnogram 0.1.0-dev"
-            }
         }
     }
 }

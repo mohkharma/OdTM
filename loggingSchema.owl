@@ -73,13 +73,19 @@
 
     <!-- http://birzeit.edu/logging_schema#hasMessage -->
 
-    <owl:DatatypeProperty rdf:about="http://birzeit.edu/logging_schema#hasMessage"/>
+    <owl:DatatypeProperty rdf:about="http://birzeit.edu/logging_schema#hasMessage">
+        <rdfs:domain rdf:resource="http://birzeit.edu/logging_schema#LogEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://birzeit.edu/logging_schema#hasTimestamp -->
 
-    <owl:DatatypeProperty rdf:about="http://birzeit.edu/logging_schema#hasTimestamp"/>
+    <owl:DatatypeProperty rdf:about="http://birzeit.edu/logging_schema#hasTimestamp">
+        <rdfs:domain rdf:resource="http://birzeit.edu/logging_schema#LogEntry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 

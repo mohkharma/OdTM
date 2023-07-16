@@ -13,8 +13,14 @@ public class LogToOWLConverter {
         String logFilePath = "C:\\M.kharma_data\\PhD\\03-Semester-2022\\Threat-modeling\\OdTM-mkharma\\tomcatLogSample.log";
         File logFile = new File(logFilePath);
 
-        // Create an empty OWL ontology
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        // Load the ontology
+        OntModel ontModel = ModelFactory.createOntologyModel();
+        ontModel.read("C:\\M.kharma_data\\PhD\\03-Semester-2022\\Threat-modeling\\OdTM-mkharma\\CC_Ontology.owl");
+//        ontModel.read("C:\\M.kharma_data\\PhD\\03-Semester-2022\\Threat-modeling\\OdTM-mkharma\\loggingSchema.owl");
+
+//
+//        // Create an empty OWL ontology
+//        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
 
         // Set the namespace and prefix for the ontology
         String ns = "http://birzeit.edu/logging_schema#";
@@ -27,8 +33,8 @@ public class LogToOWLConverter {
         OntClass logLevelClass = ontModel.createClass(ns + "LogLevel");
         OntClass loggerClass = ontModel.createClass(ns + "Logger");
         DatatypeProperty timestampProperty = ontModel.createDatatypeProperty(ns + "hasTimestamp");
-        DatatypeProperty logLevelProperty = ontModel.createDatatypeProperty(ns + "hasLogLevel");
-        DatatypeProperty componentProperty = ontModel.createDatatypeProperty(ns + "hasComponent");
+        ObjectProperty logLevelProperty = ontModel.createObjectProperty(ns + "hasLevel");
+        ObjectProperty componentProperty = ontModel.createObjectProperty(ns + "hasLogger");
         DatatypeProperty messageProperty = ontModel.createDatatypeProperty(ns + "hasMessage");
 
         // Read the log file and process each log entry
@@ -45,7 +51,7 @@ public class LogToOWLConverter {
 
                 // Set property values for the individual
                 logEntryIndividual.addProperty(timestampProperty, logEntry.getTimestamp());
-                logLevelIndividual.addProperty(logLevelProperty, logLevelIndividual);
+                logEntryIndividual.addProperty(logLevelProperty, logLevelIndividual);
                 logEntryIndividual.addProperty(componentProperty, loggerIndividual);
                 logEntryIndividual.addProperty(messageProperty, logEntry.getMessage());
             }
@@ -56,9 +62,25 @@ public class LogToOWLConverter {
         // Serialize the ontology to XML format
         try (OutputStream outputStream = new FileOutputStream("generated_logging_example.owl")) {
             ontModel.write(outputStream, "RDF/XML-ABBREV");
+            ontModel.write(new FileOutputStream("TURTLELogging.owl"), "TURTLE");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("python",
+                    ("C:\\M.kharma_data\\PhD\\03-Semester-2022\\Threat-modeling\\OdTM-mkharma\\uploadGraphDB.py"));
+//        processBuilder.redirectErrorStream(true);
+            Process process = processBuilder.start();
+            int exitCode = process.waitFor();
+            System.out.println("No errors should be detected" + exitCode);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     // Method to parse a log entry and extract relevant information
