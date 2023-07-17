@@ -241,7 +241,6 @@
 
     <owl:ObjectProperty rdf:about="http://birzeit.edu/cve_schema5_0#hasMetric">
         <rdfs:domain rdf:resource="http://birzeit.edu/cve_schema5_0#CVEInformationSource"/>
-        <rdfs:range rdf:resource="http://birzeit.edu/cve_schema5_0#Metric"/>
     </owl:ObjectProperty>
     
 
@@ -270,6 +269,15 @@
     
 
 
+    <!-- http://birzeit.edu/cve_schema5_0#hasProduct -->
+
+    <owl:ObjectProperty rdf:about="http://birzeit.edu/cve_schema5_0#hasProduct">
+        <rdfs:domain rdf:resource="http://birzeit.edu/cve_schema5_0#AffectedProduct"/>
+        <rdfs:range rdf:resource="http://birzeit.edu/cve_schema5_0#Product"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://birzeit.edu/cve_schema5_0#hasReportingHistory -->
 
     <owl:ObjectProperty rdf:about="http://birzeit.edu/cve_schema5_0#hasReportingHistory">
@@ -294,6 +302,7 @@
 
     <owl:ObjectProperty rdf:about="http://birzeit.edu/cve_schema5_0#hasVendor">
         <rdfs:domain rdf:resource="http://birzeit.edu/cve_schema5_0#AffectedProduct"/>
+        <rdfs:range rdf:resource="http://birzeit.edu/cve_schema5_0#ProductVendor"/>
     </owl:ObjectProperty>
     
 
@@ -465,15 +474,6 @@
     <!-- http://birzeit.edu/cve_schema5_0#hasOrgId -->
 
     <owl:DatatypeProperty rdf:about="http://birzeit.edu/cve_schema5_0#hasOrgId">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://birzeit.edu/cve_schema5_0#hasProduct -->
-
-    <owl:DatatypeProperty rdf:about="http://birzeit.edu/cve_schema5_0#hasProduct">
-        <rdfs:domain rdf:resource="http://birzeit.edu/cve_schema5_0#AffectedProduct"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -651,6 +651,20 @@
     <owl:Class rdf:about="http://birzeit.edu/cve_schema5_0#Platform">
         <rdfs:label>Platform</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://birzeit.edu/cve_schema5_0#Product -->
+
+    <owl:Class rdf:about="http://birzeit.edu/cve_schema5_0#Product">
+        <rdfs:comment>This represent the affected product information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://birzeit.edu/cve_schema5_0#ProductVendor -->
+
+    <owl:Class rdf:about="http://birzeit.edu/cve_schema5_0#ProductVendor"/>
     
 
 

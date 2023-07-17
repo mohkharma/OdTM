@@ -9,10 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cloud="http://example.com/cloud#"
      xmlns:cve_schema5_0="http://birzeit.edu/cve_schema5_0#">
-
     <owl:Ontology rdf:about="http://birzeit.edu/CC">
         <owl:imports rdf:resource="file:///C:/M.kharma_data/PhD/03-Semester-2022/Threat-modeling/OdTM-mkharma/CVE_OntologyV2.owl"/>
-        <owl:imports rdf:resource="file:///C:/M.kharma_data/PhD/03-Semester-2022/Threat-modeling/OdTM-mkharma/CloudServiceModelV2.owl"/>
     </owl:Ontology>
     
 
@@ -106,6 +104,7 @@
     <!-- http://birzeit.edu/CC#CloudProvider -->
 
     <owl:Class rdf:about="http://birzeit.edu/CC#CloudProvider">
+        <owl:equivalentClass rdf:resource="http://birzeit.edu/cve_schema5_0#ProductVendor"/>
         <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/company"/>
     </owl:Class>
     
@@ -137,7 +136,9 @@
 
     <!-- http://birzeit.edu/CC#ServiceComponent -->
 
-    <owl:Class rdf:about="http://birzeit.edu/CC#ServiceComponent"/>
+    <owl:Class rdf:about="http://birzeit.edu/CC#ServiceComponent">
+        <owl:equivalentClass rdf:resource="http://birzeit.edu/cve_schema5_0#Product"/>
+    </owl:Class>
     
 
 
@@ -251,338 +252,338 @@
     
 
 
-    <!-- http://birzeit.edu/CC#Azure_Desktop -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#Azure_Desktop &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#Azure_Desktop">
-        <rdf:type rdf:resource="http://birzeit.edu/CC#Desktop_as_a_service"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Application_Azure_RDP"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Data_Azure_RDMS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Middleware_Azure_Kafka"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem_Azure_Linux"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Runtime_Azure_Java"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Servers_Azure_EC2"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Storage_Azure_S3"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>
-        <rdfs:comment>DaaS provider offering data and application,Middleware,OperatingSystem,Runtime,networking, storage, servers, and virtualization</rdfs:comment>
-        <rdfs:label>Microsoft Azure Desktop</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#Azure_Desktop">-->
+<!--        <rdf:type rdf:resource="http://birzeit.edu/CC#Desktop_as_a_service"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Application_Azure_RDP"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Data_Azure_RDMS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Middleware_Azure_Kafka"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem_Azure_Linux"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Runtime_Azure_Java"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Servers_Azure_EC2"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Storage_Azure_S3"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>-->
+<!--        <rdfs:comment>DaaS provider offering data and application,Middleware,OperatingSystem,Runtime,networking, storage, servers, and virtualization</rdfs:comment>-->
+<!--        <rdfs:label>Microsoft Azure Desktop</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://birzeit.edu/CC#CloudProvider_Amazon -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#CloudProvider_Amazon &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Amazon"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Amazon"/>-->
+<!--    -->
 
 
-    <!-- http://birzeit.edu/CC#CloudProvider_Google -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#CloudProvider_Google &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Google"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Google"/>-->
+<!--    -->
 
 
-    <!-- http://birzeit.edu/CC#CloudProvider_Microsoft -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#CloudProvider_Microsoft &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Microsoft">
-        <rdf:type rdf:resource="http://birzeit.edu/CC#CloudProvider"/>
-        <OfferServices rdf:resource="http://birzeit.edu/CC#Azure_Desktop"/>
-        <OfferServices rdf:resource="http://example.com/cloud#AWS_EC2"/>
-        <OfferServices rdf:resource="http://example.com/cloud#Azure_AppService"/>
-        <OfferServices rdf:resource="http://example.com/cloud#Azure_VirtualMachines"/>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Microsoft">-->
+<!--        <rdf:type rdf:resource="http://birzeit.edu/CC#CloudProvider"/>-->
+<!--        <OfferServices rdf:resource="http://birzeit.edu/CC#Azure_Desktop"/>-->
+<!--        <OfferServices rdf:resource="http://example.com/cloud#AWS_EC2"/>-->
+<!--        <OfferServices rdf:resource="http://example.com/cloud#Azure_AppService"/>-->
+<!--        <OfferServices rdf:resource="http://example.com/cloud#Azure_VirtualMachines"/>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://birzeit.edu/CC#CloudProvider_Oracle -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#CloudProvider_Oracle &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Oracle"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#CloudProvider_Oracle"/>-->
+<!--    -->
 
 
-    <!-- http://birzeit.edu/CC#Communication_as_a_service_Azure_VPN -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#Communication_as_a_service_Azure_VPN &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#Communication_as_a_service_Azure_VPN">
-        <rdf:type rdf:resource="http://birzeit.edu/CC#Communication_as_a_service"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>
-        <rdfs:comment>DaaS provider offering networking</rdfs:comment>
-        <rdfs:label>Microsoft Azure VPN</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#Communication_as_a_service_Azure_VPN">-->
+<!--        <rdf:type rdf:resource="http://birzeit.edu/CC#Communication_as_a_service"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>-->
+<!--        <rdfs:comment>DaaS provider offering networking</rdfs:comment>-->
+<!--        <rdfs:label>Microsoft Azure VPN</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://birzeit.edu/CC#Function_as_a_Service_Lamda -->
+<!--    &lt;!&ndash; http://birzeit.edu/CC#Function_as_a_Service_Lamda &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#Function_as_a_Service_Lamda">
-        <rdf:type rdf:resource="http://birzeit.edu/CC#Function_as_a_Service"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Middleware_Azure_Kafka"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem_Azure_Linux"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Runtime_Azure_Java"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Servers_Azure_EC2"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Storage_Azure_S3"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>
-        <rdfs:comment>DaaS provider offering data and application,Middleware,OperatingSystem,Runtime,networking, storage, servers, and virtualization</rdfs:comment>
-        <rdfs:label>Microsoft Azure Desktop</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://birzeit.edu/CC#Function_as_a_Service_Lamda">-->
+<!--        <rdf:type rdf:resource="http://birzeit.edu/CC#Function_as_a_Service"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Middleware_Azure_Kafka"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Networking_Azure_VLAN"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem_Azure_Linux"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Runtime_Azure_Java"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Servers_Azure_EC2"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Storage_Azure_S3"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>-->
+<!--        <rdfs:comment>DaaS provider offering data and application,Middleware,OperatingSystem,Runtime,networking, storage, servers, and virtualization</rdfs:comment>-->
+<!--        <rdfs:label>Microsoft Azure Desktop</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#AWS_EC2 -->
+<!--    &lt;!&ndash; http://example.com/cloud#AWS_EC2 &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#AWS_EC2">
-        <rdf:type rdf:resource="http://example.com/cloud#IaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Networking"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Servers"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Storage"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization"/>
-        <rdfs:comment>IaaS provider offering networking, storage, servers, and virtualization</rdfs:comment>
-        <rdfs:label>Amazon Web Services (AWS) Elastic Compute Cloud (EC2)</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#AWS_EC2">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#IaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Networking"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Servers"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Storage"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization"/>-->
+<!--        <rdfs:comment>IaaS provider offering networking, storage, servers, and virtualization</rdfs:comment>-->
+<!--        <rdfs:label>Amazon Web Services (AWS) Elastic Compute Cloud (EC2)</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Application -->
+<!--    &lt;!&ndash; http://example.com/cloud#Application &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Application"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Application"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Application_Azure_RDP -->
+<!--    &lt;!&ndash; http://example.com/cloud#Application_Azure_RDP &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Application_Azure_RDP"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Application_Azure_RDP"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Azure_AppService -->
+<!--    &lt;!&ndash; http://example.com/cloud#Azure_AppService &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Azure_AppService">
-        <rdf:type rdf:resource="http://example.com/cloud#PaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Middleware"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Runtime"/>
-        <rdfs:comment>PaaS provider offering operating system, middleware, and runtime</rdfs:comment>
-        <rdfs:label>Microsoft Azure App Service</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Azure_AppService">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#PaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Middleware"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Runtime"/>-->
+<!--        <rdfs:comment>PaaS provider offering operating system, middleware, and runtime</rdfs:comment>-->
+<!--        <rdfs:label>Microsoft Azure App Service</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Azure_VirtualMachines -->
+<!--    &lt;!&ndash; http://example.com/cloud#Azure_VirtualMachines &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Azure_VirtualMachines">
-        <rdf:type rdf:resource="http://example.com/cloud#IaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Networking"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Servers"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Storage"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization"/>
-        <rdfs:comment>IaaS provider offering networking, storage, servers, and virtualization</rdfs:comment>
-        <rdfs:label>Microsoft Azure Virtual Machines</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Azure_VirtualMachines">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#IaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Networking"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Servers"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Storage"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Virtualization"/>-->
+<!--        <rdfs:comment>IaaS provider offering networking, storage, servers, and virtualization</rdfs:comment>-->
+<!--        <rdfs:label>Microsoft Azure Virtual Machines</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Data -->
+<!--    &lt;!&ndash; http://example.com/cloud#Data &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Data"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Data"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Data_Azure_RDMS -->
+<!--    &lt;!&ndash; http://example.com/cloud#Data_Azure_RDMS &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Data_Azure_RDMS"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Data_Azure_RDMS"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Google_AppEngine -->
+<!--    &lt;!&ndash; http://example.com/cloud#Google_AppEngine &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Google_AppEngine">
-        <rdf:type rdf:resource="http://example.com/cloud#PaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Middleware"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Runtime"/>
-        <rdfs:comment>PaaS provider offering operating system, middleware, and runtime</rdfs:comment>
-        <rdfs:label>Google App Engine</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Google_AppEngine">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#PaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Middleware"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Runtime"/>-->
+<!--        <rdfs:comment>PaaS provider offering operating system, middleware, and runtime</rdfs:comment>-->
+<!--        <rdfs:label>Google App Engine</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Google_Workspace -->
+<!--    &lt;!&ndash; http://example.com/cloud#Google_Workspace &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Google_Workspace">
-        <rdf:type rdf:resource="http://example.com/cloud#SaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Application"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Data"/>
-        <rdfs:comment>SaaS provider offering data and application</rdfs:comment>
-        <rdfs:label>Google Workspace</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Google_Workspace">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#SaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Application"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Data"/>-->
+<!--        <rdfs:comment>SaaS provider offering data and application</rdfs:comment>-->
+<!--        <rdfs:label>Google Workspace</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Heroku -->
+<!--    &lt;!&ndash; http://example.com/cloud#Heroku &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Heroku">
-        <rdf:type rdf:resource="http://example.com/cloud#PaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Middleware"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Runtime"/>
-        <rdfs:comment>PaaS provider offering operating system, middleware, and runtime</rdfs:comment>
-        <rdfs:label>Heroku</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Heroku">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#PaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Middleware"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#OperatingSystem"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Runtime"/>-->
+<!--        <rdfs:comment>PaaS provider offering operating system, middleware, and runtime</rdfs:comment>-->
+<!--        <rdfs:label>Heroku</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Microsoft_Office365 -->
+<!--    &lt;!&ndash; http://example.com/cloud#Microsoft_Office365 &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Microsoft_Office365">
-        <rdf:type rdf:resource="http://example.com/cloud#SaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Application"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Data"/>
-        <rdfs:comment>SaaS provider offering data and application</rdfs:comment>
-        <rdfs:label>Microsoft Office 365</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Microsoft_Office365">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#SaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Application"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Data"/>-->
+<!--        <rdfs:comment>SaaS provider offering data and application</rdfs:comment>-->
+<!--        <rdfs:label>Microsoft Office 365</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Middleware -->
+<!--    &lt;!&ndash; http://example.com/cloud#Middleware &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Middleware"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Middleware"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Middleware_Azure_Kafka -->
+<!--    &lt;!&ndash; http://example.com/cloud#Middleware_Azure_Kafka &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Middleware_Azure_Kafka"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Middleware_Azure_Kafka"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Networking -->
+<!--    &lt;!&ndash; http://example.com/cloud#Networking &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Networking"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Networking"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Networking_Azure_VLAN -->
+<!--    &lt;!&ndash; http://example.com/cloud#Networking_Azure_VLAN &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Networking_Azure_VLAN"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Networking_Azure_VLAN"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#OperatingSystem -->
+<!--    &lt;!&ndash; http://example.com/cloud#OperatingSystem &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#OperatingSystem"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#OperatingSystem"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#OperatingSystem_Azure_Linux -->
+<!--    &lt;!&ndash; http://example.com/cloud#OperatingSystem_Azure_Linux &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#OperatingSystem_Azure_Linux"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#OperatingSystem_Azure_Linux"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Runtime -->
+<!--    &lt;!&ndash; http://example.com/cloud#Runtime &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Runtime"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Runtime"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Runtime_Azure_Java -->
+<!--    &lt;!&ndash; http://example.com/cloud#Runtime_Azure_Java &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Runtime_Azure_Java"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Runtime_Azure_Java"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Salesforce -->
+<!--    &lt;!&ndash; http://example.com/cloud#Salesforce &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Salesforce">
-        <rdf:type rdf:resource="http://example.com/cloud#SaaS"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Application"/>
-        <cloud:provides rdf:resource="http://example.com/cloud#Data"/>
-        <rdfs:comment>SaaS provider offering data and application</rdfs:comment>
-        <rdfs:label>Salesforce</rdfs:label>
-    </owl:NamedIndividual>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Salesforce">-->
+<!--        <rdf:type rdf:resource="http://example.com/cloud#SaaS"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Application"/>-->
+<!--        <cloud:provides rdf:resource="http://example.com/cloud#Data"/>-->
+<!--        <rdfs:comment>SaaS provider offering data and application</rdfs:comment>-->
+<!--        <rdfs:label>Salesforce</rdfs:label>-->
+<!--    </owl:NamedIndividual>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Servers -->
+<!--    &lt;!&ndash; http://example.com/cloud#Servers &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Servers"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Servers"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Servers_Azure_EC2 -->
+<!--    &lt;!&ndash; http://example.com/cloud#Servers_Azure_EC2 &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Servers_Azure_EC2"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Servers_Azure_EC2"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Storage -->
+<!--    &lt;!&ndash; http://example.com/cloud#Storage &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Storage"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Storage"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Storage_Azure_S3 -->
+<!--    &lt;!&ndash; http://example.com/cloud#Storage_Azure_S3 &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Storage_Azure_S3"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Storage_Azure_S3"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Virtualization -->
+<!--    &lt;!&ndash; http://example.com/cloud#Virtualization &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Virtualization"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Virtualization"/>-->
+<!--    -->
 
 
-    <!-- http://example.com/cloud#Virtualization_Azure_HyperVisure -->
+<!--    &lt;!&ndash; http://example.com/cloud#Virtualization_Azure_HyperVisure &ndash;&gt;-->
 
-    <owl:NamedIndividual rdf:about="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>
-    
+<!--    <owl:NamedIndividual rdf:about="http://example.com/cloud#Virtualization_Azure_HyperVisure"/>-->
+<!--    -->
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+<!--    &lt;!&ndash; -->
+<!--    ///////////////////////////////////////////////////////////////////////////////////////-->
+<!--    //-->
+<!--    // Annotations-->
+<!--    //-->
+<!--    ///////////////////////////////////////////////////////////////////////////////////////-->
+<!--     &ndash;&gt;-->
 
-    <rdf:Description rdf:about="http://example.com/cloud#Application">
-        <rdfs:comment>The application component provided in the Software as a Service (SaaS) model</rdfs:comment>
-        <rdfs:label>Application</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Data">
-        <rdfs:comment>The data component provided in the Software as a Service (SaaS) model</rdfs:comment>
-        <rdfs:label>Data</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Middleware">
-        <rdfs:comment>The middleware component provided in the Platform as a Service (PaaS) model</rdfs:comment>
-        <rdfs:label>Middleware</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Networking">
-        <rdfs:comment>The networking component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
-        <rdfs:label>Networking</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#OperatingSystem">
-        <rdfs:comment>The operating system component provided in the Platform as a Service (PaaS) model</rdfs:comment>
-        <rdfs:label>Operating System</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Runtime">
-        <rdfs:comment>The runtime component provided in the Platform as a Service (PaaS) model</rdfs:comment>
-        <rdfs:label>Runtime</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Servers">
-        <rdfs:comment>The servers component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
-        <rdfs:label>Servers</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Storage">
-        <rdfs:comment>The storage component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
-        <rdfs:label>Storage</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://example.com/cloud#Virtualization">
-        <rdfs:comment>The virtualization component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>
-        <rdfs:label>Virtualization</rdfs:label>
-    </rdf:Description>
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Application">-->
+<!--        <rdfs:comment>The application component provided in the Software as a Service (SaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Application</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Data">-->
+<!--        <rdfs:comment>The data component provided in the Software as a Service (SaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Data</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Middleware">-->
+<!--        <rdfs:comment>The middleware component provided in the Platform as a Service (PaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Middleware</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Networking">-->
+<!--        <rdfs:comment>The networking component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Networking</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#OperatingSystem">-->
+<!--        <rdfs:comment>The operating system component provided in the Platform as a Service (PaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Operating System</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Runtime">-->
+<!--        <rdfs:comment>The runtime component provided in the Platform as a Service (PaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Runtime</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Servers">-->
+<!--        <rdfs:comment>The servers component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Servers</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Storage">-->
+<!--        <rdfs:comment>The storage component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Storage</rdfs:label>-->
+<!--    </rdf:Description>-->
+<!--    <rdf:Description rdf:about="http://example.com/cloud#Virtualization">-->
+<!--        <rdfs:comment>The virtualization component provided in the Infrastructure as a Service (IaaS) model</rdfs:comment>-->
+<!--        <rdfs:label>Virtualization</rdfs:label>-->
+<!--    </rdf:Description>-->
 </rdf:RDF>
 
 
